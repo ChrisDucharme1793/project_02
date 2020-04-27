@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essential Goods APP</title>
+    <link href="/stylesheets/style.css" rel="stylesheet" type="text/css">
+</head>
+	<body>
+        <div class="container mx-auto">
+            <div>
+                <a href="/"><h1 class="font-sans text-6xl font-black text-blue-700 text-center">Essential Goods App</h1></a>
+                <p class="text-center">An Essential Good Locatior</p>
+            </div>
+
+            {{!--  NAVBAR COMPONENT --}}
+            <nav class="flex items-center justify-between bg-gray-100 p-4 my-8 shadow rounded">
+                <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                    <div class="text-sm lg:flex-grow">
+                        <a href="/home" class="block mt-4 lg:inline-block lg:mt-0 font-bold text-blue-700 hover:text-blue-900 mr-4">
+                            Home
+                        </a>
+                         <a href="/locations" class="block mt-4 lg:inline-block lg:mt-0 font-bold text-blue-700 hover:text-blue-900 mr-4">
+                            Home
+                        </a>
+                        <a href="/saved_products" class="block mt-4 lg:inline-block lg:mt-0 font-bold text-blue-700 hover:text-blue-900 mr-4">
+                            Saved Products
+                        </a>
+                    </div>
+                    <div class="flex items-center  justify-start">
+                         <p id="user-name" class="hidden text-black mr-4 text-sm">
+                            Welcome&nbsp;User
+                        </p>
+                         <a href="/signin" id="signin" class="block mt-4 lg:mt-0 font-bold bg-blue-500 hover:bg-blue-400 text-white px-5 rounded py-2 mr-4">
+                            SignIn
+                        </a>
+                        <a href="#" id="logout" class="hidden mt-4 lg:mt-0 font-bold bg-blue-500 hover:bg-blue-400 text-white px-5 rounded py-2 mr-4" onclick="logout()">
+                            Logout
+                         </div>
+                </div>
+            </nav>
+        
+		{{{ body }}}
+
+        </div>             
+                                
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://www.viralpatel.net/demo/jquery/jquery.shorten.1.0.js"></script>
+        
+        </div>
+         
+        <script type="text/javascript" src="/js/postsavedproducts.js"></script>
+        <script src="/js/authConfig.js"></script>
+        <script src="/js/auth.js"></script>
+	</body>
+</html>

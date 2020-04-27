@@ -1,0 +1,13 @@
+<div class="w-full max-w-lg mx-auto">
+
+    <h1 class="mb-4 font-bold uppercase text-5xl">{{saved_products}}</h1>
+
+    {{#each saved_products.Products}}
+        <h2 class="mb-4 font-bold text-blue-700 hover:text-blue-900"><a href="#">{{productName}}</a></h2>
+        <h2 class="mb-4 font-bold">Price: {{price}}</h2>
+        <h2 class="mb-4 font-bold">Quantity: {{quantity}}</h2>
+        <h2 class="mb-4 font-bold">Notes: {{notes}}</h2>
+
+    {{/each}}
+
+</div>
