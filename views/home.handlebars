@@ -1,0 +1,17 @@
+    
+    <div class="grid sm:grid-cols-1 md:grid-cols-3 gap-4">
+        {{#each product}}
+        <div class="md:max-w-sm flex flex-col items-center rounded overflow-hidden shadow-lg hover:shadow-xl">
+            <img class="w-32 mt-4" src="#" alt="Image of product">
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl text-center mb-2" id="title{{id}}">{{productName}}</div>
+                <p class="notes">{{Notes}}</p>
+            </div>
+            <a href="/productinfo" class="transition duration-500 ease-in-out cursor-pointer rounded bg-blue-500 hover:bg-blue-400 px-3 py-1 my-4 text-white text-sm" 
+            id="{{id}}">See Product Info</a>
+
+            <a href="/addsavedproducts" class="transition duration-500 ease-in-out cursor-pointer rounded bg-blue-500 hover:bg-blue-400 px-3 py-1 my-4 text-white text-sm" 
+            id="{{id}}">Add to Saved Products</a>
+        </div>
+        {{/each}}
+    </div>
