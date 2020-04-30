@@ -22,7 +22,7 @@ module.exports = function (app) {
         res.redirect(307, '/api/login')
       })
       .catch(function (err) {
-        res.status(401).json(JSON.stringify(err))
+        res.status(401).json(err)
       })
   })
 

@@ -13,11 +13,11 @@ module.exports = (sequelize, DataTypes) => {
     },
 
     quantity: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.INTERGER,
       allowNull: false,
     },
 
-    servingSize: {
+    notes: {
       type: DataTypes.TEXT,
       allowNull: true,
     },
