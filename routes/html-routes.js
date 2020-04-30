@@ -5,13 +5,6 @@ var path = require('path')
 var isAuthenticated = require('../config/middleware/isAuthenticated')
 
 module.exports = app => {
-  app.get("/", (req, res) => {
-    // This route for now is testing the handlebars files\
-    search(req.query.searchValue).then(podcasts => {
-      res.render("home", { podcasts: podcasts });
-    });
-  });
-
   app.get('/login', (req, res) => {
     // If the user already has an account send them to the members page
     res.render("login");
