@@ -1,20 +1,19 @@
 module.exports = (sequelize, DataTypes) => {
-  const saved_products = sequelize.define('saved_products', {
-});
+  const saved_products = sequelize.define("saved_products", {});
   // Add ProductId to Donation model
-  saved_products.associate = (models) => {
-    saved_products.belongsTo(models.User, {
+  saved_products.associate = (model) => {
+    saved_products.belongsTo(model.User, {
       foreignKey: {
-        allowNull: false
-      }
+        allowNull: false,
+      },
     });
- 
-  saved_products.hasMany(models.products, {
+
+    saved_products.hasMany(model.Product, {
       foreignKey: {
-      allowNull: false
-    }
-  });
-};
+        allowNull: false,
+      },
+    });
+  };
 
   return saved_products;
 };
