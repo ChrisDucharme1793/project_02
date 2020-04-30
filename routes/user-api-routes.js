@@ -1,3 +1,4 @@
+
 // Requiring our models
 const db = require("../models");
 
@@ -38,3 +39,4 @@ module.exports = app => {
     }).then(dbUser => res.json(dbUser));
   });
 };
+
