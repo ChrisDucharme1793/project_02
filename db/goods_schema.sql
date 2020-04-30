@@ -1,4 +1,3 @@
-
 DROP DATABASE IF EXISTS essential_goods_db;
 CREATE DATABASE essential_goods_db;
 
@@ -7,8 +6,10 @@ USE essential_goods_db;
 DROP TABLE IF EXISTS users;
 CREATE TABLE users(
     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-    email VARCHAR(255) NOT NULL,
-    password VARCHAR(255) NOT NULL
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    createdAt varchar(255) default null,
+    updatedAt varchar(255) default NULL
 );
 
 DROP TABLE IF EXISTS product;
@@ -28,13 +29,10 @@ CREATE TABLE locations(
     locationCity VARCHAR(20) NOT NULL,
     locationState VARCHAR(14) NOT NULL,
     productID varchar (10) NOT NULL,
-    locationLink varchar(255) NOT NULL
+    locationLink text NOT NULL
 );
 
 DROP TABLE IF EXISTS saved_products;
 CREATE TABLE saved_products(
     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL
 );
-
-
-
