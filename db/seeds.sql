@@ -4,6 +4,10 @@ INSERT INTO essential_goods_db.users(email, password) VALUES("ducharme.christoph
 INSERT INTO essential_goods_db.users (email, password) VALUES("Kevin@gmail.com", "abc123");
 INSERT INTO essential_goods_db.users (email, password) VALUES("chad@gmail.com", "abc123");
 
+INSERT INTO essential_goods_db.users(email, password) VALUES("ducharme.christophert@gmail.com", "abc123");
+INSERT INTO essential_goods_db.users (email, password) VALUES("Kevin@gmail.com", "abc123");
+INSERT INTO essential_goods_db.users (email, password) VALUES("chad@gmail.com", "abc123");
+
 INSERT INTO essential_goods_db.product(productName, price, quantity, servingSize) VALUES("Dried Beans", 1.99, 26, "1 cup");
 INSERT INTO essential_goods_db.product(productName, price, quantity, servingSize) VALUES("Eggs", 1.24, 97, "1 carton");
 INSERT INTO essential_goods_db.product(productName, price, quantity, servingSize) VALUES("Milk", 1.99, 43, "1 gallon");
@@ -52,7 +56,3 @@ INSERT INTO essential_goods_db.locations(locationName, locationStreet, locationC
 INSERT INTO essential_goods_db.locations(locationName, locationStreet, locationCity, locationState, productID, locationLink) VALUES("Costco", "15330 IH 35 N", "San Antonio", "Texas", 8 , "shorturl.at/nuyFQ");
 INSERT INTO essential_goods_db.locations(locationName, locationStreet, locationCity, locationState, productID, locationLink) VALUES("HEB", "721 Castroville Rd", "San Antonio", "Texas", 8 , "shorturl.at/gAVX2");
 INSERT INTO essential_goods_db.locations(locationName, locationStreet, locationCity, locationState, productID, locationLink) VALUES("HEB", "9255 FM 471 West", "San Antonio", "Texas", 8 , "shorturl.at/dkpOT");
-
-
-
-
