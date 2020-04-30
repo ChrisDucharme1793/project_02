@@ -1,6 +1,7 @@
 DROP DATABASE IF EXISTS essential_goods_db;
 CREATE DATABASE essential_goods_db;
 USE essential_goods_db;
+
 DROP TABLE IF EXISTS users;
 CREATE TABLE users(
     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
