@@ -5,8 +5,13 @@
         "es6": true,
         "jquery": true
     },
+    "plugins": [
+        "security"
+    ],
     "extends": [
-        "standard"
+        "standard",
+        "plugin:prettier/recommended",
+        "plugin:security/recommended"
     ],
     "globals": {
         "Atomics": "readonly",
