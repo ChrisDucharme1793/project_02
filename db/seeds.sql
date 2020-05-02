@@ -1,13 +1,13 @@
 USE essential_goods_db;
 
-INSERT INTO essential_goods_db.product(productName, price, quantity, servingSize) VALUES("Dried Beans", 1.99, 26, "1 cup");
-INSERT INTO essential_goods_db.product(productName, price, quantity, servingSize) VALUES("Eggs", 1.24, 97, "1 carton");
-INSERT INTO essential_goods_db.product(productName, price, quantity, servingSize) VALUES("Milk", 1.99, 43, "1 gallon");
-INSERT INTO essential_goods_db.product(productName, price, quantity, servingSize) VALUES("Chicken Breast", 12.99, 12, "1 pound");
-INSERT INTO essential_goods_db.product(productName, price, quantity, servingSize) VALUES("Condoms", 39.99, 69, "500 Pack");
-INSERT INTO essential_goods_db.product(productName, price, quantity, servingSize) VALUES("Komodo Dragon", 494.73, 2, "1 lizard");
-INSERT INTO essential_goods_db.product(productName, price, quantity, servingSize) VALUES("Mom's Meatloaf", 11.99, 1, "1 loaf");
-INSERT INTO essential_goods_db.product(productName, price, quantity, servingSize) VALUES("Bob Ross VHS Tape Season 15", 2500, 3, "1 tape");
+INSERT INTO essential_goods_db.Products(productName, price, quantity, servingSize) VALUES("Dried Beans", 1.99, 26, "1 cup");
+INSERT INTO essential_goods_db.Products(productName, price, quantity, servingSize) VALUES("Eggs", 1.24, 97, "1 carton");
+INSERT INTO essential_goods_db.Products(productName, price, quantity, servingSize) VALUES("Milk", 1.99, 43, "1 gallon");
+INSERT INTO essential_goods_db.Products(productName, price, quantity, servingSize) VALUES("Chicken Breast", 12.99, 12, "1 pound");
+INSERT INTO essential_goods_db.Products(productName, price, quantity, servingSize) VALUES("Condoms", 39.99, 69, "500 Pack");
+INSERT INTO essential_goods_db.Products(productName, price, quantity, servingSize) VALUES("Komodo Dragon", 494.73, 2, "1 lizard");
+INSERT INTO essential_goods_db.Products(productName, price, quantity, servingSize) VALUES("Mom's Meatloaf", 11.99, 1, "1 loaf");
+INSERT INTO essential_goods_db.Products(productName, price, quantity, servingSize) VALUES("Bob Ross VHS Tape Season 15", 2500, 3, "1 tape");
 
 INSERT INTO essential_goods_db.locations(locationName, locationStreet, locationCity, locationState, productID, locationLink) VALUES("Walmart", "918 Bandera Rd", "San Antonio", "Texas", 1 , "https://www.google.com/maps/place/Walmart+Supercenter/@29.4585406,-98.5555783,17z/data=!3m1!4b1!4m5!3m4!1s0x865c5e8dd514e231:0xdd4e2aa5962da7d8!8m2!3d29.4585359!4d-98.5533896");
 INSERT INTO essential_goods_db.locations(locationName, locationStreet, locationCity, locationState, productID, locationLink) VALUES("CVS", "300 East Commerce St", "San Antonio", "Texas", 1 , "https://www.google.com/maps/place/CVS/@29.4238876,-98.4919398,17z/data=!3m1!4b1!4m5!3m4!1s0x865c58ac9fe2d7cd:0xb836f27d1cbf1bf7!8m2!3d29.4238829!4d-98.4897511");
