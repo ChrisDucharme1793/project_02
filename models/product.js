@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
   Product.associate = (models) => {
     Product.belongsTo(models.saved_products, {
       foreignKey: {
-        allowNull: false,
+        allowNull: true,
       },
     });
   };

@@ -33,7 +33,7 @@ module.exports = (sequelize, DataTypes) => {
   locations.associate = (models) => {
     locations.hasMany(models.Product, {
       foreignKey: {
-        allowNull: false,
+        allowNull: true,
       },
     });
   };
