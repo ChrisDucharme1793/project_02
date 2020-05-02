@@ -1,4 +1,3 @@
-  
 language: node_js
 node_js: "12"
 branches:
@@ -10,4 +9,5 @@ cache:
 script:
   - npm i
   - npm run lint
+  - npm run test
   

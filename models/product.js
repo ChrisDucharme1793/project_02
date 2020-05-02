@@ -1,35 +1,34 @@
 // Creating our Product model
 module.exports = (sequelize, DataTypes) => {
-  const Product = sequelize.define('Product', {
-
+  const Product = sequelize.define("Product", {
     productName: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
 
     price: {
       type: DataTypes.DECIMAL,
-      allowNull: false
+      allowNull: false,
     },
 
     quantity: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
     },
 
     servingSize: {
       type: DataTypes.TEXT,
-      allowNull: true
-    }
-  })
+      allowNull: true,
+    },
+  });
 
   Product.associate = (models) => {
     Product.belongsTo(models.saved_products, {
       foreignKey: {
-        allowNull: false
-      }
-    })
-  }
+        allowNull: false,
+      },
+    });
+  };
 
-  return Product
-}
+  return Product;
+};
