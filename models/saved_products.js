@@ -6,13 +6,13 @@ module.exports = (sequelize, DataTypes) => {
   saved_products.associate = (model) => {
     saved_products.belongsTo(model.User, {
       foreignKey: {
-        allowNull: false,
+        allowNull: true,
       },
     });
 
     saved_products.hasMany(model.Product, {
       foreignKey: {
-        allowNull: false,
+        allowNull: true,
       },
     });
   };
