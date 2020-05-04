@@ -5,24 +5,23 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-
-    locationStreet: {
+    productName: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-
-    LocationCity: {
-      type: DataTypes.STRING,
+    price: {
+      type: DataTypes.DECIMAL,
       allowNull: false,
     },
 
-    locationState: {
-      type: DataTypes.STRING,
+    quantity: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+
+    servingSize: {
+      type: DataTypes.TEXT,
       allowNull: true,
-    },
-    productID: {
-      type: DataTypes.STRING,
-      allowNull: false,
     },
     locationLink: {
       type: DataTypes.STRING,
@@ -31,7 +30,7 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   locations.associate = (models) => {
-    locations.hasMany(models.Product, {
+    locations.belongsTo(models.Product, {
       foreignKey: {
         allowNull: true,
       },
