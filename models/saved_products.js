@@ -29,7 +29,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
     },
   });
- 
+
   // Add ProductId to Donation model
   saved_products.associate = (model) => {
     saved_products.belongsTo(model.User, {

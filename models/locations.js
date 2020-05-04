@@ -23,6 +23,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.TEXT,
       allowNull: true,
     },
+
     locationLink: {
       type: DataTypes.STRING,
       allowNull: false,

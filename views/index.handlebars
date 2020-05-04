@@ -2,7 +2,7 @@
     <div class="grid sm:grid-cols-1 md:grid-cols-3 gap-4">
         {{#each product}}
         <div class="md:max-w-sm flex flex-col items-center rounded overflow-hidden shadow-lg hover:shadow-xl">
-            <img class="w-32 mt-4" src="https://picsum.photos/200/300?random=1" alt="Image of product">
+            <img class="w-32 mt-4" src="{{itemImg}}" alt="Image of product">
             <div class="px-6 py-4 font-bold text-xl text-center mb-2" id="title{{id}}">
                 {{productName}}
             </div>

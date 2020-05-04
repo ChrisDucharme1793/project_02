@@ -48,8 +48,8 @@ module.exports = function (app) {
   });
 
   app.get("/api/products", function (req, res) {
-    db.product.findAll({})
-    .then(function(dbProduct) {
+    db.product.findAll({}).then(function (dbProduct) {
       res.json(dbProduct);
     });
-})};
+  });
+};
