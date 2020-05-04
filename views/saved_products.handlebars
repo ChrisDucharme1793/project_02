@@ -1,13 +1,17 @@
-<div class="w-full max-w-lg mx-auto">
 
-    <h1 class="mb-4 font-bold uppercase text-5xl">{{saved_products}}</h1>
-
-    {{#each saved_products.Products}}
-        <h2 class="mb-4 font-bold text-blue-700 hover:text-blue-900"><a href="#">{{productName}}</a></h2>
-        <h2 class="mb-4 font-bold">Price: {{price}}</h2>
-        <h2 class="mb-4 font-bold">Quantity: {{quantity}}</h2>
-        <h2 class="mb-4 font-bold">Notes: {{notes}}</h2>
-
-    {{/each}}
-
-</div>
+<div class="grid sm:grid-cols-1 md:grid-cols-3 gap-4">
+        {{#each saved_product}}
+        <div class="md:max-w-sm flex flex-col items-center rounded overflow-hidden shadow-lg hover:shadow-xl">
+            <img class="w-32 mt-4" src="{{imageUrl}}" alt="Image of product">
+            <div class="px-6 py-4 font-bold text-xl text-center mb-2" id="title{{id}}">
+                {{locationName}}
+            </div>
+            <h2 class="mb-4 font-bold" >{{productName}}</h2>
+             <h2 class="mb-4 font-bold">Price: {{price}}</h2>
+            <h2 class="mb-4 font-bold">Quantity: {{quantity}}</h2>
+            <h2 class="mb-4 font-bold">servingSize: {{servingSize}}</h2>
+            <a href="{{locationLink}}" class="transition duration-500 ease-in-out cursor-pointer rounded bg-blue-500 hover:bg-blue-400 px-3 py-1 my-4 text-white text-sm" 
+            id="{{id}}">Directions to Location</a>
+          
+        </div>
+        {{/each}}

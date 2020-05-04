@@ -10,8 +10,6 @@ const Sequelize = require('sequelize')
 var isAuthenticated = require('../config/middleware/isAuthenticated')
 module.exports = (app) => {
 
-
-
   app.get('/', function (req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
@@ -33,42 +31,31 @@ module.exports = (app) => {
   })
   
   app.get('/products', (req, res) => {
-   
    db.Product.findAll({})
    .then(data =>{
-    console.log("data")
-     console.log(data)
     var test = data.map(e => e.dataValues)
     var hbsObject = {product:test}
-    console.log("hbs")
-    console.log(hbsObject)
     res.render('index', hbsObject)})
   })
+
   app.get('/products/1', (req, res) => {
     db.locations.findAll({
       where:{ productId: 1}
     })
     .then( data2 =>{
       var test2 = data2.map(e => e.dataValues )
-      console.log("test2")
-      console.log(test2)
       var hbsObject2 = {location:test2}
-      console.log("hbsObject2")
-     console.log(hbsObject2)
      res.render('product_info', hbsObject2)})
     
   })
+
   app.get('/products/2', (req, res) => {
     db.locations.findAll({
       where:{ productId: 2}
     })
     .then( data2 =>{
       var test2 = data2.map(e => e.dataValues )
-      console.log("test2")
-      console.log(test2)
       var hbsObject2 = {location:test2}
-      console.log("hbsObject2")
-     console.log(hbsObject2)
      res.render('product_info', hbsObject2)})
     
   })
@@ -79,11 +66,7 @@ module.exports = (app) => {
     })
     .then( data2 =>{
       var test2 = data2.map(e => e.dataValues )
-      console.log("test2")
-      console.log(test2)
       var hbsObject2 = {location:test2}
-      console.log("hbsObject2")
-     console.log(hbsObject2)
      res.render('product_info', hbsObject2)})
     
   })
@@ -94,11 +77,7 @@ module.exports = (app) => {
     })
     .then( data2 =>{
       var test2 = data2.map(e => e.dataValues )
-      console.log("test2")
-      console.log(test2)
       var hbsObject2 = {location:test2}
-      console.log("hbsObject2")
-     console.log(hbsObject2)
      res.render('product_info', hbsObject2)})
     
   })
@@ -108,11 +87,7 @@ module.exports = (app) => {
     })
     .then( data2 =>{
       var test2 = data2.map(e => e.dataValues )
-      console.log("test2")
-      console.log(test2)
       var hbsObject2 = {location:test2}
-      console.log("hbsObject2")
-     console.log(hbsObject2)
      res.render('product_info', hbsObject2)})
     
   })
@@ -123,11 +98,7 @@ module.exports = (app) => {
     })
     .then( data2 =>{
       var test2 = data2.map(e => e.dataValues )
-      console.log("test2")
-      console.log(test2)
       var hbsObject2 = {location:test2}
-      console.log("hbsObject2")
-     console.log(hbsObject2)
      res.render('product_info', hbsObject2)})
     
   })
@@ -138,11 +109,7 @@ module.exports = (app) => {
     })
     .then( data2 =>{
       var test2 = data2.map(e => e.dataValues )
-      console.log("test2")
-      console.log(test2)
       var hbsObject2 = {location:test2}
-      console.log("hbsObject2")
-     console.log(hbsObject2)
      res.render('product_info', hbsObject2)})
     
   })
@@ -161,13 +128,21 @@ module.exports = (app) => {
      res.render('product_info', hbsObject2)})
     
   })
+
   app.get('/saved_products/', (req, res) => {
-    // This route for now is testing the handlebars files
-    res.render('saved_products')
-  })
+    db.saved_products.findAll({})
+   .then(data =>{
+    var test3 = data.map(e => e.dataValues)
+    var hbsObject3 = {saved_product:test3}
+    console.log("hbs")
+    console.log(hbsObject3)
+   
+    res.render('saved_products', hbsObject3)})
+ })
+
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get('/members', isAuthenticated, function (req, res) {
     res.sendFile(path.join(__dirname, '../public/members.html'))
-  })
-}
+  }
+)}
