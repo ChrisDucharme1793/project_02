@@ -36,17 +36,130 @@ module.exports = (app) => {
    
    db.Product.findAll({})
    .then(data =>{
+    console.log("data")
+     console.log(data)
     var test = data.map(e => e.dataValues)
     var hbsObject = {product:test}
+    console.log("hbs")
     console.log(hbsObject)
     res.render('index', hbsObject)})
-  
-   
+  })
+  app.get('/products/1', (req, res) => {
+    db.locations.findAll({
+      where:{ productId: 1}
+    })
+    .then( data2 =>{
+      var test2 = data2.map(e => e.dataValues )
+      console.log("test2")
+      console.log(test2)
+      var hbsObject2 = {location:test2}
+      console.log("hbsObject2")
+     console.log(hbsObject2)
+     res.render('product_info', hbsObject2)})
     
   })
-  app.get('/products/:id', (req, res) => {
-    // This route for now is testing the handlebars files
-    res.render('product_info')
+  app.get('/products/2', (req, res) => {
+    db.locations.findAll({
+      where:{ productId: 2}
+    })
+    .then( data2 =>{
+      var test2 = data2.map(e => e.dataValues )
+      console.log("test2")
+      console.log(test2)
+      var hbsObject2 = {location:test2}
+      console.log("hbsObject2")
+     console.log(hbsObject2)
+     res.render('product_info', hbsObject2)})
+    
+  })
+
+  app.get('/products/3', (req, res) => {
+    db.locations.findAll({
+      where:{ productId: 3}
+    })
+    .then( data2 =>{
+      var test2 = data2.map(e => e.dataValues )
+      console.log("test2")
+      console.log(test2)
+      var hbsObject2 = {location:test2}
+      console.log("hbsObject2")
+     console.log(hbsObject2)
+     res.render('product_info', hbsObject2)})
+    
+  })
+
+  app.get('/products/4', (req, res) => {
+    db.locations.findAll({
+      where:{ productId: 4}
+    })
+    .then( data2 =>{
+      var test2 = data2.map(e => e.dataValues )
+      console.log("test2")
+      console.log(test2)
+      var hbsObject2 = {location:test2}
+      console.log("hbsObject2")
+     console.log(hbsObject2)
+     res.render('product_info', hbsObject2)})
+    
+  })
+  app.get('/products/5', (req, res) => {
+    db.locations.findAll({
+      where:{ productId: 5}
+    })
+    .then( data2 =>{
+      var test2 = data2.map(e => e.dataValues )
+      console.log("test2")
+      console.log(test2)
+      var hbsObject2 = {location:test2}
+      console.log("hbsObject2")
+     console.log(hbsObject2)
+     res.render('product_info', hbsObject2)})
+    
+  })
+
+  app.get('/products/6', (req, res) => {
+    db.locations.findAll({
+      where:{ productId: 6}
+    })
+    .then( data2 =>{
+      var test2 = data2.map(e => e.dataValues )
+      console.log("test2")
+      console.log(test2)
+      var hbsObject2 = {location:test2}
+      console.log("hbsObject2")
+     console.log(hbsObject2)
+     res.render('product_info', hbsObject2)})
+    
+  })
+
+  app.get('/products/7', (req, res) => {
+    db.locations.findAll({
+      where:{ productId: 7}
+    })
+    .then( data2 =>{
+      var test2 = data2.map(e => e.dataValues )
+      console.log("test2")
+      console.log(test2)
+      var hbsObject2 = {location:test2}
+      console.log("hbsObject2")
+     console.log(hbsObject2)
+     res.render('product_info', hbsObject2)})
+    
+  })
+
+  app.get('/products/8', (req, res) => {
+    db.locations.findAll({
+      where:{ productId: 8}
+    })
+    .then( data2 =>{
+      var test2 = data2.map(e => e.dataValues )
+      console.log("test2")
+      console.log(test2)
+      var hbsObject2 = {location:test2}
+      console.log("hbsObject2")
+     console.log(hbsObject2)
+     res.render('product_info', hbsObject2)})
+    
   })
   app.get('/saved_products/', (req, res) => {
     // This route for now is testing the handlebars files
