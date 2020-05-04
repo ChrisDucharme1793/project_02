@@ -20,6 +20,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.TEXT,
       allowNull: true,
     },
+    itemImg: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
   });
 
   Product.associate = (models) => {

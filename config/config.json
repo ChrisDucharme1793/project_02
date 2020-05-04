@@ -1,11 +1,11 @@
 {
   "development": {
     "username": "root",
-    "password": "Ellycia93",
+    "password": "Greaser2!",
     "database": "essential_goods_db",
     "host": "127.0.0.1",
     "dialect": "mysql",
-    "define": { 
+    "define": {
       "timestamps": false
     }
   },
@@ -13,7 +13,8 @@
     "username": null,
     "password": null,
     "database": "database_test",
-    "dialect": "sqlite"
+    "dialect": "sqlite",
+    "logging": false
   },
   "production": {
     "username": "root",
