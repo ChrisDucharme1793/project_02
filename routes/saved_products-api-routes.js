@@ -1,47 +1,41 @@
-const db = require("../models");
+var db = require("../models");
 
 // Routes
 // =============================================================
 module.exports = (app) => {
-  // GET route for getting all of the collections
-  app.get("/api/saved_products", (req, res) => {
-    db.saved_products
-      .findAll({
-        include: [db.products],
-      })
-      .then((dbSavedProducts) => res.json(dbSavedProducts));
-  });
 
-  // Get route for retrieving a single collection
-  app.get("/api/saved_products/:id", (req, res) => {
-    db.saved_products
-      .findOne({
-        where: {
-          id: req.params.id,
-        },
-      })
-      .then((dbSavedProducts) => res.json(dbSavedProducts));
-  });
+  app.get("/api/saved_products/:id", function(req, res) {
+   
+  db.saved_products.findAll({ where: { userId: req.params.id } })
+      .then(function (dbSavedProducts) {
+        res.json(dbSavedProducts);
+      });
+});
 
-  // POST route for saving a new collection
-  app.post("/api/saved_products", (req, res) => {
-    db.saved_products
-      .create(req.body)
-      .then((dbSavedProducts) => res.json(dbSavedProducts));
-  });
+app.post("/api/saved_products", function (req, res) {
+  console.log(req.body)
+  db.saved_products.create({
+    locationName: req.body.locationName,
+    productName: req.body.productName,
+    quantity: req.body.quantity,
+    price: req.body.price,
+    locationLink: req.body.locationLink,
+    userId: req.body.userId
+  })
+    .then(function (dbPost) {
+      res.json(dbPost);
+    });
+});
 
-  app.post("/api/products", (req, res) => {
-    db.products.create(req.body).then((dbProducts) => res.json(dbProducts));
-  });
 
-  // DELETE route for deleting a collection
-  app.delete("/api/saved_products/:id", (req, res) => {
-    db.saved_products
-      .destroy({
-        where: {
-          id: req.params.id,
-        },
-      })
-      .then((dbSavedProducts) => res.json(dbSavedProducts));
-  });
+// DELETE route for deleting a collection
+app.delete("/api/saved_products/:id", (req, res) => {
+  db.saved_products
+    .destroy({
+      where: {
+        id: req.params.id,
+      },
+    })
+    .then((dbSavedProducts) => res.json(dbSavedProducts));
+});
 };
