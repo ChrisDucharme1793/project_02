@@ -3,14 +3,14 @@
 /* eslint security/detect-non-literal-fs-filename: 0 */
 "use strict";
 
-const fs = require("fs");
-const path = require("path");
-const Sequelize = require("sequelize");
-const basename = path.basename(module.filename);
-const env = process.env.NODE_ENV || "development";
+var fs = require("fs");
+var path = require("path");
+var Sequelize = require("sequelize");
+var basename = path.basename(module.filename);
+var env = process.env.NODE_ENV || "development";
 // eslint-disable-next-line no-path-concat
-const config = require(__dirname + "/../config/config.json")[env];
-const db = {};
+var config = require(__dirname + "/../config/config.json")[env];
+var db = {};
 
 let sequelize;
 

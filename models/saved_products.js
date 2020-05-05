@@ -28,22 +28,13 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: true,
     },
+    userId:{
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    }
   });
 
   // Add ProductId to Donation model
-  saved_products.associate = (model) => {
-    saved_products.belongsTo(model.User, {
-      foreignKey: {
-        allowNull: true,
-      },
-    });
-
-    saved_products.hasMany(model.Product, {
-      foreignKey: {
-        allowNull: true,
-      },
-    });
-  };
 
   return saved_products;
 };

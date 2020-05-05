@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Greaser2!",
+    "password": "Ellycia93",
     "database": "essential_goods_db",
     "host": "127.0.0.1",
     "dialect": "mysql",
@@ -17,10 +17,11 @@
     "logging": false
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "use_env_variable": "JAWSDB_URL",
+    "username": "j58rdogrdshvey38",
+    "password": "hxltvrgdh1cw6ohd",
+    "database": "a438mph6gsw3x1qc",
+    "host": "muowdopceqgxjn2b.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   }
 }

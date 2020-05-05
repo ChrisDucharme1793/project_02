@@ -32,6 +32,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.TEXT,
       allowNull: true,
     },
+    itemImg: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   });
 
   locations.associate = (models) => {
