@@ -28,6 +28,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    itemImg: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   });
 
   locations.associate = (models) => {
