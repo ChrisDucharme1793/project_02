@@ -1,5 +1,6 @@
 USE essential_goods_db;
 
+
 INSERT INTO essential_goods_db.Products(productName, price, quantity, servingSize, itemImg) VALUES("Dried Beans", 1.99, 26, "1 cup","https://cdn.loveandlemons.com/wp-content/uploads/2020/03/beans.jpg");
 INSERT INTO essential_goods_db.Products(productName, price, quantity, servingSize, itemImg) VALUES("Eggs", 1.24, 97, "1 carton","https://www.strombergschickens.com/mm5/graphics/00000001/Egg-Carton-For-Chicken-Eggs-Open-LG.jpg");
 INSERT INTO essential_goods_db.Products(productName, price, quantity, servingSize, itemImg) VALUES("Milk", 1.99, 43, "1 gallon","https://33q47o1cmnk34cvwth15pbvt120l-wpengine.netdna-ssl.com/wp-content/uploads/raw-milk-1-e1563894986431-755x1024.jpg");
