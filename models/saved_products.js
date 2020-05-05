@@ -4,20 +4,20 @@ module.exports = (sequelize, DataTypes) => {
   const saved_products = sequelize.define("saved_products", {
     locationName: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     productName: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     price: {
       type: DataTypes.DECIMAL,
-      allowNull: false,
+      allowNull: true,
     },
 
     quantity: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
 
     servingSize: {
@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     locationLink: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
   });
 

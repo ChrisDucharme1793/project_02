@@ -3,20 +3,20 @@ module.exports = (sequelize, DataTypes) => {
   const locations = sequelize.define("locations", {
     locationName: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     productName: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     price: {
       type: DataTypes.DECIMAL,
-      allowNull: false,
+      allowNull: true,
     },
 
     quantity: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
 
     servingSize: {
@@ -26,7 +26,11 @@ module.exports = (sequelize, DataTypes) => {
 
     locationLink: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
+    },
+    itemImg: {
+      type: DataTypes.TEXT,
+      allowNull: true,
     },
   });
 
