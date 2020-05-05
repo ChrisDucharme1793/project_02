@@ -1,10 +1,10 @@
-const request = require("supertest");
-const { describe, it, beforeAll, expect } = require("@jest/globals");
-const app = require("../server");
-const db = require("../models");
+var request = require("supertest");
+var { describe, it, beforeAll, expect } = require("@jest/globals");
+var app = require("../server");
+var db = require("../models");
 
-const TEST_EMAIL = "test@test.com";
-const TEST_PASSWORD = "badpassword";
+var TEST_EMAIL = "test@test.com";
+var TEST_PASSWORD = "badpassword";
 
 describe("tests for api routes", function () {
   beforeAll(async () => {
@@ -45,7 +45,7 @@ describe("tests for api routes", function () {
   });
 
   it("GET /api/user_data works if logged in", function (done) {
-    const server = request.agent(app);
+    var server = request.agent(app);
     server
       .post("/api/login")
       .send({ email: TEST_EMAIL, password: TEST_PASSWORD })
@@ -58,7 +58,7 @@ describe("tests for api routes", function () {
   });
 
   it("GET /api/logout redirects to / and actually logs us out", function (done) {
-    const server = request.agent(app);
+    var server = request.agent(app);
     server
       .post("/api/login")
       .send({ email: TEST_EMAIL, password: TEST_PASSWORD })

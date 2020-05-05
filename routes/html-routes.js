@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
 // Requiring path to so we can use relative routes to our HTML files
-const express = require("express");
+var express = require("express");
 var path = require("path");
-const db = require("../models");
-const Sequelize = require("sequelize");
+var db = require("../models");
+var Sequelize = require("sequelize");
 
 // Requiring our custom middleware for checking if a user is logged in
 var isAuthenticated = require("../config/middleware/isAuthenticated");
