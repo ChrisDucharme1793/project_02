@@ -3,17 +3,17 @@ module.exports = (sequelize, DataTypes) => {
   const Product = sequelize.define("Product", {
     productName: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
 
     price: {
       type: DataTypes.DECIMAL,
-      allowNull: false,
+      allowNull: true,
     },
 
     quantity: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
 
     servingSize: {
@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     itemImg: {
       type: DataTypes.TEXT,
-      allowNull: false,
+      allowNull: true,
     },
   });
 
