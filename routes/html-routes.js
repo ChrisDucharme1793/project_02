@@ -128,6 +128,21 @@ module.exports = (app) => {
      res.render('product_info', hbsObject2)})
     
   })
+  
+    app.get('/products/9', (req, res) => {
+    db.locations.findAll({
+      where:{ productId: 89}
+    })
+    .then( data2 =>{
+      var test2 = data2.map(e => e.dataValues )
+      console.log("test2")
+      console.log(test2)
+      var hbsObject2 = {location:test2}
+      console.log("hbsObject2")
+     console.log(hbsObject2)
+     res.render('product_info', hbsObject2)})
+    
+  })
 
   app.get('/saved_products/', (req, res) => {
     db.saved_products.findAll({})
