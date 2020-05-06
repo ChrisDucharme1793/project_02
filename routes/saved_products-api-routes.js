@@ -4,7 +4,7 @@ var db = require("../models");
 // =============================================================
 module.exports = (app) => {
 
-  app.get("/api/saved_products/:id", function(req, res) {
+  app.get("/api/saved_products/", function(req, res) {
    
   db.saved_products.findAll({ where: { userId: req.params.id } })
       .then(function (dbSavedProducts) {
@@ -20,7 +20,6 @@ app.post("/api/saved_products", function (req, res) {
     quantity: req.body.quantity,
     price: req.body.price,
     locationLink: req.body.locationLink,
-    userId: req.body.userId
   })
     .then(function (dbPost) {
       res.json(dbPost);

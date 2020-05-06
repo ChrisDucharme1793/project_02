@@ -26,4 +26,6 @@ $(function AddSavedProducts() {
 			location.reload();
 		});
   });
+
 });
+
