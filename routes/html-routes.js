@@ -155,10 +155,12 @@ module.exports = (app) => {
 
   app.get("/saved_products/", (req, res) => {
     db.saved_products.findAll({}).then((data) => {
+    
       var test3 = data.map((e) => e.dataValues);
+    //  console.log(test3);
       var hbsObject3 = { saved_product: test3 };
-      console.log("hbs");
-      console.log(hbsObject3);
+      //console.log("hbs");
+//      console.log(hbsObject3);
 
       res.render("saved_products", hbsObject3);
     });
@@ -187,4 +189,5 @@ module.exports = (app) => {
   app.get("/members", isAuthenticated, function (req, res) {
     res.sendFile(path.join(__dirname, "../public/members.html"));
   });
+});
 };

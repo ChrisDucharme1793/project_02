@@ -2,17 +2,25 @@
 <div class="grid sm:grid-cols-1 md:grid-cols-3 gap-4">
         {{#each location}}
         <div class="md:max-w-sm flex flex-col items-center rounded overflow-hidden shadow-lg hover:shadow-xl">
-            <img class="w-32 mt-4" src="{{itemImg}}" alt="Image of product">
-            <div class="px-6 py-4 font-bold text-xl text-center mb-2" id="title{{id}}">
+            <img class="w-32 mt-4" id="itemImg" src="{{itemImg}}" alt="Image of product">
+            <div class="px-6 py-4 font-bold text-xl text-center mb-2" id="locationName">
                 {{locationName}}
             </div>
-            <h2 class="mb-4 font-bold" >{{productName}}</h2>
-             <h2 class="mb-4 font-bold">Price: ${{price}}</h2>
+            <h2 class="mb-4 font-bold" id="productName" >{{productName}}</h2>
+            <h2 class="mb-4 font-bold">Price: ${{price}}</h2>
             <h2 class="mb-4 font-bold">Quantity: {{quantity}}</h2>
             <h2 class="mb-4 font-bold">servingSize: {{servingSize}}</h2>
             <a href="{{locationLink}}" target="blank" class="transition duration-500 ease-in-out cursor-pointer rounded bg-blue-500 hover:bg-blue-400 px-3 py-1 my-4 text-white text-sm" 
             id="{{id}}">Directions to Location</a>
-            <a href="#" class="btn-saved transition duration-500 ease-in-out cursor-pointer rounded bg-blue-500 hover:bg-blue-400 px-3 py-1 my-4 text-white text-sm" 
-            data-productName="{{productName}}" data-price="{{price}}">Add to Saved Products</a>
+            <a href=""  class="btn-saved transition duration-500 ease-in-out cursor-pointer rounded bg-blue-500 hover:bg-blue-400 px-3 py-1 my-4 text-white text-sm" 
+             str-productName="{{productName}}"
+             data-locationName="{{locationName}}" 
+             data-quantity="{{quantity}}" 
+             data-price="{{price}}" 
+             data-servingSize="{{servingSize}}"
+             data-locationLink="{{locationLink}}"
+             data-itemImg="{{itemImg}}">Add to Saved Products</a>
         </div>
         {{/each}}
+
+
