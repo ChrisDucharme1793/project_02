@@ -29,7 +29,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: true,
     },
     itemImg: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: true,
     },
   });
