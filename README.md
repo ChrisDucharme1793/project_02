@@ -38,7 +38,9 @@ Demo is still in progress...
 ## Contributing
 
 -Kevin Cox(Co-Creator) - kevincox1983@gmail.com
+
 -Chris Ducharme(Co-Creator) - ducharme.christophert@gmail.com
+
 -Chad Worthan(Co-Creator) - chadwworthan@gmail.com
 
 If you wish to contribute to this project please do a pull request. That be super cool.
