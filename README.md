@@ -1,5 +1,5 @@
 # Essential Goods Locator 
-![EGL Screenshot](egl-screenshot.png)
+![EGL Screenshot](egl.png)
 
 ## Description
 
