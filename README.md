@@ -33,7 +33,9 @@ If everything is ok you should be able to see this app running locally in your b
 
 ## Demo
 
-Demo is still in progress...
+Demo is still in progress... but below is the current Heroku Deployed version
+
+[Heroku Demo](https://essential-goods-locator.herokuapp.com/)
 
 ## Contributing
 
