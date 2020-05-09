@@ -1,26 +1,45 @@
-# Unit 15: Project 2
+# Essential Goods Locator 
+![EGL Screenshot](egl-screenshot.png)
 
-## Overview
-Welcome to Project 2! This is yet another important milestone in your full-stack journey: designing and building your first full-stack web application. You and your team will design and build an app using the MVC paradigm and your own server-side API. You will also continue to add to your professional repertoire with testing, continuous integration and linting tools.
+## Description
 
-## Key Topics
-* Linting
-* Continuous integration
-* Testing
+As we are all going to unprecedented times, we undoubtedly
+have gone to a store looking for a certain item only to find the shelves bare
+and item nowhere to be found. Our app would take the guesswork out of
+the store scavenger hunt.
 
-## Comprehension Check
-You will be employer-ready if you can answer the following questions:
-1. Why is TDD?
-2. What is linting?
-3. What is continuous integration?
+## Technologies
 
-## Learning Objectives
-You will be employer-competitive if you are able to:
-* Configure linting and continuous integration with Travis CI.
-* Explain and implement unit tests
-* Design, build and deploy a full-stack web application to Heroku
+- [Node.js](https://nodejs.org/en/) 
+- [Express](https://expressjs.com/) 
+- [MySQL](https://www.mysql.com/) 
+- [Handlebars](http://handlebarsjs.com/) 
+- [Tailwindcss](https://tailwindcss.com/)  
+- [jQuery](https://jquery.com/)
+- [Sequelize](https://sequelize.org/)
+- [Bootstrap](https://getbootstrap.com/)
 
-## Helpful Links
-[Mocha JS Docs](https://mochajs.org/)
-[Chai JS Docs](https://www.chaijs.com/)
-[Agile Methodology](https://en.wikipedia.org/wiki/Agile_software_development)
+## Usage and Installation
+
+Feel free to clone or fork this repo if you find it useful. To install dependencies make sure to run:
+
+```
+npm i
+```
+
+You will also need to install [MySql Workbench](https://www.mysql.com/products/workbench/) or some other application that handles SQL databases. Before spinning up the server use the schema.sql to build up the database with MySql Workbench.
+
+If everything is ok you should be able to see this app running locally in your browser at localhost:8080. 
+
+## Demo
+
+Demo is still in progress...
+
+## Contributing
+
+If you wish to contribute to this project please do a pull request. That be super cool.
+
+## Questions?
+
+
+Have any questions? Want to collaborate on a project? Shoot me an [email](Ducharme.christophert@gmail.com)
